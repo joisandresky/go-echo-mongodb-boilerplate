@@ -11,3 +11,7 @@ MongoDB:
   User: "your_db_user" #YOUR MONGODB USERNAME
   Pwd: "your_db_pwd" #YOUR MONGODB PWD
   IsSrv: false
+
+Universe:
+  FirstAnotherSvcUrl: http://localhost:8101
+  SecondAnotherSvcUrl: http://localhost:8102

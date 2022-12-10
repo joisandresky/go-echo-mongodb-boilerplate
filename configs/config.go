@@ -27,8 +27,8 @@ type DatabaseConfig struct {
 }
 
 type Universe struct {
-	UserSvcUrl   string
-	TenantSvcUrl string
+	FirstAnotherSvcUrl  string
+	SecondAnotherSvcUrl string
 }
 
 // Load config file from given path
