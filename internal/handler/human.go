@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/entity"
-	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/helper"
 	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/repository"
+	"github.com/joisandresky/go-echo-mongodb-boilerplate/pkg/helper"
 	"github.com/labstack/echo/v4"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"

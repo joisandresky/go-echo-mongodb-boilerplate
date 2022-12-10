@@ -1,12 +1,13 @@
-app:
-  name: "Your Service Name"
-  port: 8100
-  secret: "YOUR_SECRET_KEY"
-  asymmetricKey: "YOUR_PASETO_ASYMMETRIC_KEY" #PASETO_ASYMMETRIC_KEY
+App:
+  ServiceName: "Your Service Name"
+  Port: 8100
+  Secret: "YOUR_SECRET_KEY"
+  SymmetricKey: "YOUR_PASETO_ASYMMETRIC_KEY" #PASETO_ASYMMETRIC_KEY
 
-database:
-  host: "127.0.0.1" # YOUR MONGODB HOST
-  port: 27017 #YOUR MONGODB PORT
-  db_name: "your_db_name" #YOUR MONGODB DB NAME
-  user: "your_db_user" #YOUR MONGODB USERNAME
-  pwd: "your_db_pwd" #YOUR MONGODB PWD
+MongoDB:
+  Host: "127.0.0.1" # YOUR MONGODB HOST
+  Port: 27017 #YOUR MONGODB PORT
+  DbName: "your_db_name" #YOUR MONGODB DB NAME
+  User: "your_db_user" #YOUR MONGODB USERNAME
+  Pwd: "your_db_pwd" #YOUR MONGODB PWD
+  IsSrv: false

@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/helper"
 	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/token"
+	"github.com/joisandresky/go-echo-mongodb-boilerplate/pkg/helper"
 	"github.com/labstack/echo/v4"
 	"github.com/spf13/viper"
 )

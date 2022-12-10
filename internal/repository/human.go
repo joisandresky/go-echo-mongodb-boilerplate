@@ -4,8 +4,9 @@ import (
 	"context"
 
 	paginate "github.com/gobeam/mongo-go-pagination"
-	"github.com/joisandresky/go-echo-mongodb-boilerplate/database"
+	"github.com/joisandresky/go-echo-mongodb-boilerplate/configs"
 	"github.com/joisandresky/go-echo-mongodb-boilerplate/internal/entity"
+	"github.com/joisandresky/go-echo-mongodb-boilerplate/pkg/mongodb"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -26,8 +27,8 @@ type humanRepository struct {
 	c *mongo.Collection
 }
 
-func NewHumanRepository(conn database.Connection) HumanRepository {
-	return &humanRepository{conn.DB().Collection(CollectionName)}
+func NewHumanRepository(mongoConn mongodb.MongoConnection, cfg *configs.Config) HumanRepository {
+	return &humanRepository{mongoConn.DB(cfg).Collection(CollectionName)}
 }
 
 func (r *humanRepository) Paginate(ctx context.Context, page int64, limit int64, filter bson.M) ([]entity.Human, *paginate.PaginationData, error) {
